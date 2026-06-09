@@ -48,7 +48,7 @@ SCORES = {
     "claude_sonnetLow":         [5, 5, 4, 3, 3, 4, 3, 4],
     "gemini-proStandart":       [4, 5, 4, 3, 4, 4, 3, 4],
     "copilot_think":            [4, 5, 3, 2, 4, 5, 3, 4],
-    "gemini-proExtended":       [3, 4, 3, 3, 4, 4, 3, 3],
+    "gemini-proExtended":       [4, 5, 4, 2, 3, 4, 2, 4],  # yeniden uretildi: tam yanit
     "grok-fast":                [4, 4, 4, 2, 3, 5, 2, 3],
     "deepseek_instantThink":    [4, 4, 3, 2, 4, 4, 3, 3],
     "deepseek_instantStandart": [4, 4, 3, 2, 3, 4, 3, 3],

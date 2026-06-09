@@ -44,15 +44,19 @@
 | 5 | claude_sonnetLow | 31 | 3.88 |
 | 5 | gemini-proStandart | 31 | 3.88 |
 | 7 | copilot_think | 30 | 3.75 |
-| 8 | gemini-proExtended | 27 | 3.38 |
-| 8 | grok-fast | 27 | 3.38 |
-| 8 | deepseek_instantThink | 27 | 3.38 |
+| 8 | gemini-proExtended † | 28 | 3.50 |
+| 9 | grok-fast | 27 | 3.38 |
+| 9 | deepseek_instantThink | 27 | 3.38 |
 | 11 | deepseek_instantStandart | 26 | 3.25 |
 | 11 | chatgpt-askMode | 26 | 3.25 |
 | 13 | deepseek_expert | 25 | 3.12 |
 | 14 | gemini-flashStandart | 23 | 2.88 |
 | 15 | gemini-flashLite | 18 | 2.25 |
-| 16 | gemini-flashExtended | 15 | 1.88 |
+| 16 | gemini-flashExtended ‡ | 15 | 1.88 |
+
+† `gemini-proExtended` yeniden üretildi (ilk çalıştırma eksikti); tam yanıtla
+DSC-artefaktını ve denklem yorumunu doğru yaptı, ancak sınıf adı (Parser/Document)
+uydurdu ve sınırlama bölümü yok. ‡ `gemini-flashExtended` yanıtı yarıda kesik.
 
 ## 4. Bulgular (eleştirel)
 
