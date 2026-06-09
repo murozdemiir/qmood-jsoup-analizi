@@ -1,0 +1,4 @@
+GPT md download edilebiliyor
+gemini md oluşturmuyor 2. prompt gerekiyor
+grok md oluştur alttaki iken oluşturmadı, ilk satıra aldım oluşturdu ama download edilemiyordu
+deepseek instant ve expert mode'da md download edilebiliyor, think mode'da oluşturmadı

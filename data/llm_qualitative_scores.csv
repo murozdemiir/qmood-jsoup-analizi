@@ -1,0 +1,17 @@
+model,SayisalKanit,DenklemDogrulugu,DSC_Artefakt,ZamansalGranulerlik,HalusinasyonDirenci,RefactoringSomut,SinirlamaFarkindal,AnalitikDerinlik,Toplam,Ortalama
+claude_opusHigh,5,5,5,5,5,5,5,5,40,5.0
+claude_fableHigh,5,5,5,4,5,4,4,5,37,4.62
+chatgpt-thinkMode,5,5,4,3,5,4,4,4,34,4.25
+copilot_smart,5,5,4,3,5,4,3,4,33,4.12
+claude_sonnetLow,5,5,4,3,3,4,3,4,31,3.88
+gemini-proStandart,4,5,4,3,4,4,3,4,31,3.88
+copilot_think,4,5,3,2,4,5,3,4,30,3.75
+gemini-proExtended,3,4,3,3,4,4,3,3,27,3.38
+grok-fast,4,4,4,2,3,5,2,3,27,3.38
+deepseek_instantThink,4,4,3,2,4,4,3,3,27,3.38
+deepseek_instantStandart,4,4,3,2,3,4,3,3,26,3.25
+chatgpt-askMode,4,4,3,2,4,4,2,3,26,3.25
+deepseek_expert,3,4,3,2,4,4,2,3,25,3.12
+gemini-flashStandart,3,3,3,2,3,4,2,3,23,2.88
+gemini-flashLite,2,3,2,1,3,3,2,2,18,2.25
+gemini-flashExtended,2,3,2,1,3,1,1,2,15,1.88

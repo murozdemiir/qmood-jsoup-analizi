@@ -1,0 +1,17 @@
+# indirilen kaynak depo (yeniden uretilebilir)
+data/_jsoup_repo/
+data/versions/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# node (yalnizca sunum uretimi icin)
+node_modules/
+package-lock.json
+
+# isletim sistemi
+Thumbs.db
+.DS_Store

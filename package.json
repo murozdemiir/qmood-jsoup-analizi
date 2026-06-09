@@ -1,0 +1,16 @@
+{
+  "name": "proje",
+  "version": "1.0.0",
+  "description": "**Ders:** Yazılım Mimarileri ve Tasarım Yöntemleri — Dönem Projesi **Analiz edilen sistem:** [jsoup](https://github.com/jhy/jsoup) (açık kaynak Java HTML parser) **İncelenen sürüm sayısı:** 11 (jsoup 1.14.1 → 1.22.2)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

@@ -1,0 +1,40 @@
+ROL: Sen kidemli bir yazilim mimarisi ve yazilim kalitesi uzmanisin.
+Nesne yonelimli tasarim metrikleri ve QMOOD (Quality Model for Object-Oriented
+Design, Bansiya & Davis 2002) modeli konusunda deneyimlisin.
+
+GOREV: Sana acik kaynak 'jsoup' (Java HTML parser) kutuphanesinin farkli
+surumlerinden cikarilmis QMOOD tasarim metrikleri ve kalite nitelikleri
+verilecek. Bu sayisal verilere dayanarak ELESTIREL ve KANIT TEMELLI bir kalite
+degerlendirmesi yapacaksin.
+
+QMOOD KALITE NITELIK DENKLEMLERI (referans):
+  Reusability       = -0.25*DCC + 0.25*CAM + 0.50*CIS + 0.50*DSC
+  Flexibility       =  0.25*DAM - 0.25*DCC + 0.50*MOA + 0.50*NOP
+  Understandability = -0.33*(ANA+DCC+NOP+NOM+DSC) + 0.33*(DAM+CAM)
+  Functionality     =  0.12*CAM + 0.22*(NOP+CIS+DSC+NOH)
+  Extendibility     =  0.50*(ANA+MFA+NOP) - 0.50*DCC
+  Effectiveness     =  0.20*(ANA+DAM+MOA+MFA+NOP)
+Tasarim metrikleri: DSC(boyut), NOH(hiyerarsi), ANA(soyutlama), DAM(kapsulleme),
+DCC(coupling), CAM(cohesion), MOA(kompozisyon), MFA(kalitim), NOP(polimorfizm),
+CIS(mesajlasma/arayuz), NOM(karmasiklik).
+
+KURALLAR:
+- Yorumlarini DAIMA verilen sayilara dayandir; sayisal kanit goster.
+- Sadece 'iyi/kotu' deme; HANGI metrigin neden degistigini acikla.
+- Belirsizlik varsa belirt. Abartma yapma.
+
+TEK SURUM DERIN INCELEME — jsoup 1.20.1
+--------------------------------------------------
+QMOOD tasarim metrikleri:
+version   DSC  NOH    ANA    DAM    DCC    CAM    MOA    MFA    NOP    CIS    NOM
+ 1.20.1 170.0  9.0 0.6824 0.7945 3.3176 0.3218 0.4647 0.3234 5.5353 5.6294 9.6471
+
+CK metrik ortalamalari:
+version  num_classes  DIT_mean  NOC_mean  WMC_mean  CBO_mean  RFC_mean  LCOM_mean  NOM_mean  NOA_mean  MPC_mean  DAC_mean  DIT_max  NOC_max  WMC_max  CBO_max  RFC_max  LCOM_max  NOM_max  NOA_max  MPC_max  DAC_max
+ 1.20.1          170    0.6824    0.5118   19.2765    3.3176   20.5588   150.8824    9.6471    2.4529   18.5412    0.4647        3       30      262       28      287     10196      148       39      348        9
+
+Kalite nitelikleri (ham):
+version  Reusability  Flexibility  Understandability  Functionality  Extendibility  Effectiveness
+ 1.20.1      87.0657       2.3692           -62.0618        41.8748         1.6117         1.5601
+
+ISTEK: Bu surumun kalitesini degerlendirin. En zayif 2 kalite niteligini ve sorumlu metrikleri belirleyin. 3 somut refactoring onerisi verin.

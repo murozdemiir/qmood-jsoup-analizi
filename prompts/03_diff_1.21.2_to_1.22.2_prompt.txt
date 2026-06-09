@@ -1,0 +1,41 @@
+ROL: Sen kidemli bir yazilim mimarisi ve yazilim kalitesi uzmanisin.
+Nesne yonelimli tasarim metrikleri ve QMOOD (Quality Model for Object-Oriented
+Design, Bansiya & Davis 2002) modeli konusunda deneyimlisin.
+
+GOREV: Sana acik kaynak 'jsoup' (Java HTML parser) kutuphanesinin farkli
+surumlerinden cikarilmis QMOOD tasarim metrikleri ve kalite nitelikleri
+verilecek. Bu sayisal verilere dayanarak ELESTIREL ve KANIT TEMELLI bir kalite
+degerlendirmesi yapacaksin.
+
+QMOOD KALITE NITELIK DENKLEMLERI (referans):
+  Reusability       = -0.25*DCC + 0.25*CAM + 0.50*CIS + 0.50*DSC
+  Flexibility       =  0.25*DAM - 0.25*DCC + 0.50*MOA + 0.50*NOP
+  Understandability = -0.33*(ANA+DCC+NOP+NOM+DSC) + 0.33*(DAM+CAM)
+  Functionality     =  0.12*CAM + 0.22*(NOP+CIS+DSC+NOH)
+  Extendibility     =  0.50*(ANA+MFA+NOP) - 0.50*DCC
+  Effectiveness     =  0.20*(ANA+DAM+MOA+MFA+NOP)
+Tasarim metrikleri: DSC(boyut), NOH(hiyerarsi), ANA(soyutlama), DAM(kapsulleme),
+DCC(coupling), CAM(cohesion), MOA(kompozisyon), MFA(kalitim), NOP(polimorfizm),
+CIS(mesajlasma/arayuz), NOM(karmasiklik).
+
+KURALLAR:
+- Yorumlarini DAIMA verilen sayilara dayandir; sayisal kanit goster.
+- Sadece 'iyi/kotu' deme; HANGI metrigin neden degistigini acikla.
+- Belirsizlik varsa belirt. Abartma yapma.
+
+SURUM FARKI ANALIZI — jsoup 1.21.2 -> 1.22.2
+--------------------------------------------------
+Metrik       1.21.2       1.22.2   Degisim%
+DSC         179.000      184.000       2.8%
+NOH          11.000       13.000      18.2%
+ANA           0.721        0.707      -2.0%
+DAM           0.797        0.806       1.1%
+DCC           3.369        3.380       0.3%
+CAM           0.311        0.300      -3.4%
+MOA           0.458        0.489       6.8%
+MFA           0.365        0.358      -2.1%
+NOP           5.531        5.467      -1.1%
+CIS           5.486        5.457      -0.5%
+NOM           9.559        9.576       0.2%
+
+ISTEK: Bu iki surum arasindaki tasarim metrigi degisimlerini yorumlayin. Kalite acisindan bu degisim olumlu mu olumsuz mu? Teknik borc isareti var mi?
