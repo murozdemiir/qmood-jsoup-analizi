@@ -172,7 +172,7 @@ Buna **DAM −%8.0** (kapsülleme gevşemesi), **DCC/CBO +%4.0** (coupling artı
 (değişimler %4–18 bandında, ani sıçrama yok) → kontrollü/kademeli birikim.
 
 ### 6.3 LLM değerlendirmelerinin karşılaştırması
-Ana prompt (`prompts/01_full_evolution_prompt.txt`) **17 farklı LLM
+Ana prompt (`prompts/01_full_evolution_prompt.txt`) **16 farklı LLM
 yapılandırmasına** (ChatGPT-2, Claude-3, Copilot-2, DeepSeek-3, Gemini-5,
 Grok-1) **aynı koşulda** verildi. Yanıtlar `llm_responses/` altında. İki
 düzeyde karşılaştırma yapıldı: (i) otomatik yüzeysel ölçüm
@@ -182,7 +182,7 @@ düzeyde karşılaştırma yapıldı: (i) otomatik yüzeysel ölçüm
 `data/llm_qualitative_scores.csv`, `figures/fig_llm_qualitative.png`,
 `fig_llm_ranking.png`). Detaylı analiz: **`report/llm_karsilastirma.md`**.
 
-**Niteliksel uzlaşı yüksek:** 17 modelin tamamı "dış kalite (Reusability/
+**Niteliksel uzlaşı yüksek:** 16 modelin tamamı "dış kalite (Reusability/
 Functionality) artarken iç kalite (cohesion/kapsülleme/anlaşılabilirlik)
 geriliyor — kontrollü teknik borç" çekirdek anlatısında birleşti; bu, bizim
 metrik analizimizle (§5–6) örtüşür. **Hiçbir model metrik değeri uydurmadı**
@@ -198,9 +198,12 @@ metrik analizimizle (§5–6) örtüşür. **Hiçbir model metrik değeri uydurm
   refactoring hedefi olarak isimlendirdi (desteksiz spesifiklik).
 - Şüpheli öneriler: bazı modeller polimorfizmi (NOP) düşürmeyi önerdi — QMOOD'da
   NOP üç niteliği pozitif beslediğinden bu genelde yanlış tavsiyedir.
-- **Kademe etkisi sağlayıcıdan baskın:** üst kademe "reasoning" modları (Claude
-  High, ChatGPT/Copilot Think/Smart, Gemini Pro) belirgin biçimde daha derin;
-  Gemini Flash kademesi en zayıf grup (biri yanıtı yarıda kesti).
+- **Belirleyici, model kademesi değil çalıştırma modu:** her ailede akıl yürütme/
+  uzun düşünme (reasoning/extended) modu temel modu geçti (ChatGPT Think 34 > Ask
+  26; Claude High modları tepe). En çarpıcı kanıt Gemini içinde: `Flash-Extended`
+  (30) Pro'lara yaklaşırken `Flash-Lite` (18) ve `Flash-Standard` (23) en zayıf
+  ikili — yani aynı "Flash" kademesinde modlar arası 12 puan fark. Kalite,
+  Pro/Flash etiketinden çok modelin akıl yürütmeye ayırdığı bütçeyle ilişkili.
 
 **Meta-bulgu (prompt mühendisliği):** Modeller `+%27` (ham) ile `+%9.25`
 (normalize) yüzdeleri arasında, hangi tablomuza tutunduklarına göre çatallandı —

@@ -71,4 +71,11 @@ Mevcut teknik borcu azaltmak ve mimariyi stabilize etmek adına uygulanması ger
 
 ## 5. Mimari Kalite Yorumu (Architectural Erosion)
 
-Yazılım sistemleri büyüdükçe (DSC artarken) kontrol altında tutulmayan mimari eskimeler ve bozulmalar (**Architectural Erosion**) baş gösterir. jsoup verileri incelendiğinde bu durumun tipik semptomları açıkça görülmektedir:
+Yazılım sistemleri büyüdükçe (DSC artarken) kontrol altında tutulmayan mimari eskimeler ve bozulmalar (**Architectural Erosion**) baş gösterir. jsoup verileri incelendiğinde bu durumun tipik semptomları açıkça görülmektedir:[Sürüm 1.14.1 -> 1.22.2 Büyüme Anatomisi]
+DSC (Sınıf Sayısı)  : +%27.7 (Genişleme)
+ANA (Soyutlama)     : -%5.8  (Somutlaşma)
+LCOM (Eksik Uyumluluk): +%17.8 (Karmaşıklık Dağılımı)
+* **Soyutlama Yoğunluğunun Kaybı:** Tasarımdaki soyutlama oranını gösteren **ANA** metriği 0.7500'den 0.7065'e düşmüştür. Sisteme eklenen 40 yeni sınıfın ezici çoğunluğunun soyut (abstract/interface) yapılar yerine, doğrudan somut (concrete) implementasyonlar olarak koda eklendiği anlaşılmaktadır. Bu durum mimarinin esnekliğini uzun vadede kısıtlar.
+* **Hiyerarşi Düzensizliği:** Kalıtım ağacının derinliğini ifade eden **NOH** metriği `1.14.1` sürümünde 12 iken, `1.20.1` sürümünde 9'a kadar gerilemiş, ancak son sürümde (`1.22.2`) ani bir sıçramayla 13'e yükselmiştir. Bu dalgalanma ve kontrolsüz derinleşme, kalıtım hiyerarşisinin (Inheritance Hierarchy) planlı bir mimari stratejiyle değil, anlık ihtiyaçlara odaklanan yamalarla (ad-hoc) yönetildiğinin bir göstergesidir. Aynı şekilde **MFA** (Kalıtılan metot oranı: 0.30 -> 0.35) artışı, alt sınıfların yukarıya bağımlılığını artırmıştır.
+
+**Özet Teşhis:** Jsoup, fonksiyonel olarak zenginleşen ve büyüyen bir kütüphane olmasına rağmen; bu büyüme sürecinde iç kod kalitesini (clean code) koruyamamış, nesne yönelimli tasarım ilkelerinden (özellikle kapsülleme ve uyumluluk) ödün vererek yapısal olarak daha kırılgan ve erozyona açık bir mimariye doğru evrilmiştir.

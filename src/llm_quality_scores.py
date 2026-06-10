@@ -1,7 +1,7 @@
 """
 llm_quality_scores.py
 ---------------------
-17 LLM yanitinin ELESTIREL (niteliksel) degerlendirmesi. Yanitlarin tamami
+16 LLM yanitinin ELESTIREL (niteliksel) degerlendirmesi. Yanitlarin tamami
 yazarlar tarafindan okunup 8 kriterde 1-5 olceginde puanlanmistir. Bu puanlar
 otomatik degil, INSAN denetimiyle verilmistir (yonerge: "LLM ciktilari elestirel
 biçimde degerlendirilmelidir"). Bu betik puanlari belgeler, bir CSV ve isi
@@ -38,8 +38,7 @@ CRITERIA = ["SayisalKanit", "DenklemDogrulugu", "DSC_Artefakt",
             "ZamansalGranulerlik", "HalusinasyonDirenci", "RefactoringSomut",
             "SinirlamaFarkindal", "AnalitikDerinlik"]
 
-# model -> 8 kriter puani (1-5). claude.md (metodoloji tohumu) haric tutuldu;
-# Claude modeli kullanicinin topladigi opus/fable/sonnet dosyalariyla temsil ediliyor.
+# model -> 8 kriter puani (1-5). Claude ailesi opus/fable/sonnet ile temsil ediliyor.
 SCORES = {
     "claude_opusHigh":          [5, 5, 5, 5, 5, 5, 5, 5],
     "claude_fableHigh":         [5, 5, 5, 4, 5, 4, 4, 5],
@@ -56,7 +55,7 @@ SCORES = {
     "deepseek_expert":          [3, 4, 3, 2, 4, 4, 2, 3],
     "gemini-flashStandart":     [3, 3, 3, 2, 3, 4, 2, 3],
     "gemini-flashLite":         [2, 3, 2, 1, 3, 3, 2, 2],
-    "gemini-flashExtended":     [2, 3, 2, 1, 3, 1, 1, 2],  # yanit yarida kesik
+    "gemini-flashExtended":     [5, 5, 4, 2, 5, 4, 2, 3],  # yeniden uretildi: bol1-4 guclu, bol5 kesik
 }
 
 

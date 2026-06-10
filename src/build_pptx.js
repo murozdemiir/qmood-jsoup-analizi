@@ -78,7 +78,7 @@ s.addText([
   { text: "Analiz edilen sistem:  ", options: { color: ICE } },
   { text: "jsoup (Java HTML Parser) — 11 sürüm (1.14.1 → 1.22.2)", options: { color: WHITE, bold: true } },
 ], { x: 0.8, y: 4.1, w: 11.4, h: 0.5, fontFace: BF, fontSize: 17, margin: 0 });
-s.addText("17 LLM yapılandırması  ·  kendi yazdığımız metrik çıkarıcı  ·  6 kalite niteliği", { x: 0.8, y: 4.7, w: 11.4, h: 0.4, fontFace: BF, fontSize: 14, color: ICE, italic: true, margin: 0 });
+s.addText("16 LLM yapılandırması  ·  kendi yazdığımız metrik çıkarıcı  ·  6 kalite niteliği", { x: 0.8, y: 4.7, w: 11.4, h: 0.4, fontFace: BF, fontSize: 14, color: ICE, italic: true, margin: 0 });
 s.addText("Grup: Murat Özdemir (255129022) · Mustafa Can Bozbuğa (255129050) · Ahmet Ateş (255129005)      Tarih: 2026-06-10", { x: 0.8, y: 6.4, w: 11.9, h: 0.4, fontFace: BF, fontSize: 12, color: ICE, margin: 0 });
 
 /* ---------------- 2. AMAÇ & KAPSAM ---------------- */
@@ -203,7 +203,7 @@ s.addTable([
 s = pres.addSlide();
 s.background = { color: NAVY };
 s.addText("LLM DESTEKLİ DEĞERLENDİRME", { x: 0.8, y: 1.3, w: 11, h: 0.4, fontFace: BF, fontSize: 14, color: ICE, bold: true, charSpacing: 2, margin: 0 });
-s.addText("17 LLM Yapılandırması, Tek Ortak Prompt", { x: 0.8, y: 1.75, w: 11.7, h: 0.9, fontFace: HF, fontSize: 32, color: WHITE, bold: true, margin: 0 });
+s.addText("16 LLM Yapılandırması, Tek Ortak Prompt", { x: 0.8, y: 1.75, w: 11.7, h: 0.9, fontFace: HF, fontSize: 32, color: WHITE, bold: true, margin: 0 });
 const prov = [["ChatGPT", "Ask, Think"], ["Claude", "Opus, Fable, Sonnet"], ["Copilot", "Smart, Think"], ["DeepSeek", "Expert, Inst-Std, Inst-Think"], ["Gemini", "Pro x2, Flash x3"], ["Grok", "Fast"]];
 prov.forEach((p, i) => {
   const x = 0.8 + (i % 3) * 4.0, y = 3.0 + Math.floor(i / 3) * 1.7;
@@ -223,18 +223,18 @@ s.addText([
 ], { x: 8.8, y: 2.3, w: 4.0, h: 2.4, fontFace: BF, fontSize: 12.5, valign: "top", lineSpacingMultiple: 1.15, margin: 0 });
 s.addText([
   { text: "Lider: claude_opusHigh (40/40)\n", options: { bold: true, color: GOOD, breakLine: true } },
-  { text: "En zayıf grup: Gemini Flash kademesi", options: { bold: true, color: BAD } },
+  { text: "En zayıf: Gemini Flash-Lite (18) / Standard (23)", options: { bold: true, color: BAD } },
 ], { x: 8.8, y: 5.1, w: 4.0, h: 1.0, fontFace: BF, fontSize: 14, valign: "top", margin: 0 });
 
 /* ---------------- 12. LLM BULGULAR ---------------- */
 s = pres.addSlide();
 header(s, "LLM Karşılaştırma", "Eleştirel Bulgular");
 const finds = [
-  ["Uzlaşı yüksek", "17 modelin tamamı 'dış kalite artıyor, iç kalite geriliyor' anlatısında birleşti — bizim analizimizle örtüşüyor.", GOOD],
+  ["Uzlaşı yüksek", "16 modelin tamamı 'dış kalite artıyor, iç kalite geriliyor' anlatısında birleşti — bizim analizimizle örtüşüyor.", GOOD],
   ["Metrik halüsinasyonu YOK", "Hiçbir model sayısal değer uydurmadı (sayısal-kanıt kuralının başarısı).", GOOD],
   ["Sınıf adı halüsinasyonu", "Bazı modeller toplu veriden türetilemeyecek sınıf adlarını (Parser, Element...) refactoring hedefi gösterdi.", BAD],
   ["Ayırt edici: DSC-artefakt", "En güçlü yanıt, Reusability +%27'nin tamamının boyut kaynaklı olduğunu sayısal ayrıştırdı (kalite bileşeni 1.969→1.958).", NAVY],
-  ["Kademe > sağlayıcı", "Üst kademe reasoning modları belirgin derin; aynı ailede Flash << Pro.", NAVY],
+  ["Belirleyici: çalıştırma modu", "Reasoning/extended modu kademeden önemli: Gemini Flash-Extended (30) Pro'lara yaklaştı, Flash-Lite (18) en zayıf.", NAVY],
 ];
 let fy = 1.75;
 finds.forEach(([h, t, c]) => {

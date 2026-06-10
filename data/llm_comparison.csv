@@ -1,7 +1,6 @@
 model,words,number_mentions,qmood_term_coverage,refactor_mentions,structured_sections
 chatgpt-askMode,568,125,22,3,25
 chatgpt-thinkMode,914,139,20,1,23
-claude,677,100,20,5,17
 claude_fableHigh,1053,223,20,3,15
 claude_opusHigh,1185,188,19,6,24
 claude_sonnetLow,1093,196,20,3,24
@@ -10,7 +9,7 @@ copilot_think,1153,131,21,8,17
 deepseek_expert,741,94,16,5,11
 deepseek_instantStandart,952,129,18,5,16
 deepseek_instantThink,997,131,22,4,17
-gemini-flashExtended,240,41,14,0,5
+gemini-flashExtended,1012,107,22,2,12
 gemini-flashLite,409,28,14,2,10
 gemini-flashStandart,631,70,19,4,11
 gemini-proExtended,733,55,17,4,9
