@@ -2,7 +2,7 @@
 ### Analiz Edilen Sistem: jsoup (Açık Kaynak Java HTML Parser) — 11 Sürüm (1.14.1 → 1.22.2)
 
 > **Ders:** Yazılım Mimarileri ve Tasarım Yöntemleri — Dönem Projesi
-> **Grup:** Murat Özdemir (255129022), Can Bozbuğa (<numara>), Ahmet Ateş (<numara>)
+> **Grup:** Murat Özdemir (255129022), Mustafa Can Bozbuğa (255129050), Ahmet Ateş (255129005)
 > **Tarih:** 2026-06-10
 > **GitHub:** https://github.com/murozdemiir/qmood-jsoup-analizi
 

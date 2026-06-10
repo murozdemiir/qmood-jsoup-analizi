@@ -79,7 +79,7 @@ s.addText([
   { text: "jsoup (Java HTML Parser) — 11 surum (1.14.1 → 1.22.2)", options: { color: WHITE, bold: true } },
 ], { x: 0.8, y: 4.1, w: 11.4, h: 0.5, fontFace: BF, fontSize: 17, margin: 0 });
 s.addText("17 LLM yapilandirmasi  ·  kendi yazdigimiz metrik cikarici  ·  6 kalite niteligi", { x: 0.8, y: 4.7, w: 11.4, h: 0.4, fontFace: BF, fontSize: 14, color: ICE, italic: true, margin: 0 });
-s.addText("Grup: Murat Özdemir (255129022) · Can Bozbuğa · Ahmet Ateş      Tarih: 2026-06-10", { x: 0.8, y: 6.4, w: 11.7, h: 0.4, fontFace: BF, fontSize: 13, color: ICE, margin: 0 });
+s.addText("Grup: Murat Özdemir (255129022) · Mustafa Can Bozbuğa (255129050) · Ahmet Ateş (255129005)      Tarih: 2026-06-10", { x: 0.8, y: 6.4, w: 11.9, h: 0.4, fontFace: BF, fontSize: 12, color: ICE, margin: 0 });
 
 /* ---------------- 2. AMAC & KAPSAM ---------------- */
 s = pres.addSlide();
